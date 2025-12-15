@@ -2,11 +2,11 @@
 
 ## 📌 논문 소개
 
-**제목**: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
-**저자**: Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, Douwe Kiela
-**소속**: Facebook AI Research, University College London, New York University
-**학회**: NeurIPS 2020
-**arXiv**: https://arxiv.org/abs/2005.11401
+**제목**: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks   
+**저자**: Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, Douwe Kiela   
+**소속**: Facebook AI Research, University College London, New York University   
+**학회**: NeurIPS 2020   
+**arXiv**: https://arxiv.org/abs/2005.11401   
 
 ## 🎯 핵심 가치
 
