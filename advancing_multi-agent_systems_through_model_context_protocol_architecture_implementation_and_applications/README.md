@@ -8,7 +8,8 @@
 
 **저자**: Naveen Kumar Krishnan  
 **발표**: 2025년 4월 26일  
-**분야**: Multi-Agent Systems, AI Coordination, Context Management
+**분야**: Multi-Agent Systems, AI Coordination, Context Management   
+**arXiv**: https://arxiv.org/abs/2504.21030
 
 ---
 
