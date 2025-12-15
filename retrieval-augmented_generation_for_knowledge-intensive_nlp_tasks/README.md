@@ -1996,11 +1996,11 @@ Parametric Memory (LLM)     +     Non-Parametric Memory (Documents)
 
 **3. 실무 적용**
 
-✅ **ChatGPT Enterprise**: "Browse with Bing" 기능
-✅ **Microsoft Copilot**: SharePoint/OneDrive 통합
-✅ **Notion AI**: 워크스페이스 문서 검색
-✅ **Perplexity AI**: 실시간 웹 검색 + 생성
-✅ **기업 Q&A**: 사내 문서 기반 질의응답
+✅ **ChatGPT Enterprise**: "Browse with Bing" 기능   
+✅ **Microsoft Copilot**: SharePoint/OneDrive 통합   
+✅ **Notion AI**: 워크스페이스 문서 검색   
+✅ **Perplexity AI**: 실시간 웹 검색 + 생성   
+✅ **기업 Q&A**: 사내 문서 기반 질의응답   
 
 ### 구현 체크리스트
 
