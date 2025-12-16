@@ -7,10 +7,10 @@
 [![License](https://img.shields.io/badge/License-MIT-green)]()
 [![Model](https://img.shields.io/badge/Model-671B%20Parameters-orange)]()
 
-**저자**: DeepSeek-AI Team
-**발표**: 2025년 1월 20일
-**분야**: Reinforcement Learning, Large Language Models, Reasoning
-**arXiv**: https://arxiv.org/abs/2501.12948
+**저자**: DeepSeek-AI Team   
+**발표**: 2025년 1월 20일   
+**분야**: Reinforcement Learning, Large Language Models, Reasoning   
+**arXiv**: https://arxiv.org/abs/2501.12948   
    
 ---
 
