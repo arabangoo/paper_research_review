@@ -1328,76 +1328,7 @@ print(analysis)
 # - 비용: API 비용 제로
 ```
 
-#### 시나리오 2: 코딩 어시스턴트
-
-**배경:** 알고리즘 대회 준비
-
-```python
-# Codeforces 스타일 문제
-problem = """
-You are given an array of N integers.
-Find the maximum sum of a non-empty subarray.
-
-Constraints:
-- 1 ≤ N ≤ 10^5
-- -10^9 ≤ A[i] ≤ 10^9
-
-Input:
-5
--2 1 -3 4 -1
-
-Expected Output:
-4
-
-Explanation: Subarray [4] has maximum sum 4.
-"""
-
-solution = model.generate(f"""
-Solve this competitive programming problem:
-
-{problem}
-
-Requirements:
-1. Analyze the problem and choose the optimal algorithm
-2. Explain the approach and complexity
-3. Implement a clean solution
-4. Provide test cases
-
-Think step by step.
-""")
-
-# DeepSeek-R1 출력 (요약):
-"""
-<think>
-This is the classic Maximum Subarray Sum problem (Kadane's Algorithm).
-
-Approach:
-- Dynamic programming
-- State: max_ending_here = maximum sum ending at current position
-- Recurrence: max_ending_here = max(arr[i], max_ending_here + arr[i])
-
-Time Complexity: O(N)
-Space Complexity: O(1)
-</think>
-
-```python
-def max_subarray_sum(arr):
-    max_so_far = float('-inf')
-    max_ending_here = 0
-
-    for num in arr:
-        max_ending_here = max(num, max_ending_here + num)
-        max_so_far = max(max_so_far, max_ending_here)
-
-    return max_so_far
-
-# Test
-arr = [-2, 1, -3, 4, -1]
-print(max_subarray_sum(arr))  # Output: 4
-```
-"""
-
-#### 시나리오 3: 교육용 수학 문제 풀이
+#### 시나리오 2: 교육용 수학 문제 풀이
 
 **배경:** 고등학교 수학 온라인 과외
 
