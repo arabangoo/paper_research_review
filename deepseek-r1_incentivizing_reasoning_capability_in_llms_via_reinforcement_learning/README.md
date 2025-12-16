@@ -966,7 +966,7 @@ for question in training_questions:
 
 ```python
 # Step 2: 작은 모델 SFT
-student_model = Qwen(size="7B")
+student_model = DeepSeekDistillModel(base="Qwen", size="7B")
 
 for epoch in range(3):
     for batch in distillation_data:
@@ -991,21 +991,21 @@ AIME 2024 성능 vs 추론 비용:
 
 성능
  ↑
-100%│                    ● R1-671B (79.8%)
-    │                 ●  Llama-70B (77.4%)
- 75%│            ●  Qwen-32B (72.6%)
-    │         ●  Qwen-14B (69.7%)
+100%│                    ● DeepSeek-R1 (79.8%)
+    │                 ●  R1-Distill-Llama-70B (77.4%)
+ 75%│            ●  R1-32B (72.6%)
+    │         ●  R1-14B (69.7%)
     │      ●
- 50%│   ●  Qwen-7B (55.5%)
+ 50%│   ●  R1-7B (55.5%)
     │●
- 25%│ Qwen-1.5B (23.0%)
+ 25%│ R1-1.5B (23.0%)
     │
   0%└────────────────────────────────→ 비용/지연
     저렴/빠름              비쌈/느림
 
-Sweet Spot: Qwen-7B
+Sweet Spot: DeepSeek-R1-7B
 - 성능: GPT-4o 대비 6배
-- 비용: 극히 저렴
+- 비용: 극히 저렴 (오픈소스)
 - 배포: 일반 PC 가능
 ```
 
@@ -1015,19 +1015,19 @@ Sweet Spot: Qwen-7B
 # 추천 모델 선택
 def recommend_model(use_case):
     if use_case == "mobile_app":
-        return "Qwen-1.5B"  # 모바일 앱, 실시간 응답
+        return "DeepSeek-R1-1.5B"  # 모바일 앱, 실시간 응답
 
     elif use_case == "personal_assistant":
-        return "Qwen-7B"  # 개인 PC, 밸런스형
+        return "DeepSeek-R1-7B"  # 개인 PC, 밸런스형
 
     elif use_case == "enterprise_deployment":
-        return "Qwen-32B"  # 기업 서버, 고성능
+        return "DeepSeek-R1-32B"  # 기업 서버, 고성능
 
     elif use_case == "research":
-        return "Llama-70B"  # 최고 성능 필요
+        return "DeepSeek-R1-70B"  # 최고 성능 필요
 
     elif use_case == "production_api":
-        return "R1-671B"  # 상용 서비스, 최강 성능
+        return "DeepSeek-R1"  # 상용 서비스, 최강 성능 (671B)
 ```
 
 ---
@@ -1044,13 +1044,13 @@ def recommend_model(use_case):
     ├─ Yes → 어떤 성능 수준이 필요한가?
     │        │
     │        ├─ OpenAI o1 수준 필요
-    │        │   → DeepSeek-R1 (671B) or Llama-70B Distill
+    │        │   → DeepSeek-R1 (671B) or R1-70B
     │        │
     │        ├─ GPT-4o 수준이면 충분
-    │        │   → Qwen-7B Distill (추천 ⭐)
+    │        │   → DeepSeek-R1-7B (추천 ⭐)
     │        │
     │        └─ 빠른 응답이 최우선
-    │            → Qwen-1.5B Distill
+    │            → DeepSeek-R1-1.5B
     │
     └─ No → 일반 작업 (QA, 요약 등)
              → DeepSeek-V3 or 다른 일반 모델
@@ -1060,13 +1060,13 @@ def recommend_model(use_case):
 
 | 하드웨어 | VRAM | 권장 모델 | 예상 성능 (AIME) |
 |---------|------|----------|-----------------|
-| **노트북 (통합 GPU)** | 8GB | Qwen-1.5B (4bit) | 23.0% |
-| **RTX 3060** | 12GB | Qwen-7B (4bit) | 55.5% |
-| **RTX 3090** | 24GB | Qwen-7B (fp16) | 55.5% |
-| **RTX 4090** | 24GB | Qwen-14B (4bit) | 69.7% |
-| **A100 40GB** | 40GB | Qwen-32B (4bit) | 72.6% |
-| **A100 80GB** | 80GB | Qwen-32B (fp16) | 72.6% |
-| **8×A100** | 640GB | R1-671B (fp16) | 79.8% |
+| **노트북 (통합 GPU)** | 8GB | DeepSeek-R1-1.5B (4bit) | 23.0% |
+| **RTX 3060** | 12GB | DeepSeek-R1-7B (4bit) | 55.5% |
+| **RTX 3090** | 24GB | DeepSeek-R1-7B (fp16) | 55.5% |
+| **RTX 4090** | 24GB | DeepSeek-R1-14B (4bit) | 69.7% |
+| **A100 40GB** | 40GB | DeepSeek-R1-32B (4bit) | 72.6% |
+| **A100 80GB** | 80GB | DeepSeek-R1-32B (fp16) | 72.6% |
+| **8×A100** | 640GB | DeepSeek-R1 (fp16) | 79.8% |
 
 ### 프롬프팅 가이드 (중요!)
 
@@ -1291,11 +1291,11 @@ model = AutoModelForCausalLM.from_pretrained(
 **배경:** 기업 내부망에서 민감한 데이터 분석
 
 ```python
-# 온프레미스 배포 (Qwen-14B)
+# 온프레미스 배포 (DeepSeek-R1-14B)
 import pandas as pd
 from deepseek_client import DeepSeekModel
 
-model = DeepSeekModel("Qwen-14B")
+model = DeepSeekModel("deepseek-r1-14b")
 
 # CSV 데이터 로드
 sales_data = pd.read_csv("confidential_sales_2024.csv")
@@ -1625,7 +1625,7 @@ GPU 의존도:
 
 ```
 새로운 가능성:
-├─ 성능: Qwen-7B로도 충분
+├─ 성능: DeepSeek-R1-7B로도 충분
 │   AIME 55.5% (GPT-4o 대비 6배)
 │   대부분의 실무 작업 해결 가능
 │
@@ -1647,7 +1647,7 @@ Challenge: 의료 기록 분석 자동화
   - 필요 성능: 고도의 추론 능력
 
 Solution: DeepSeek-R1 온프레미스 배포
-  - 모델: Qwen-32B Distill
+  - 모델: DeepSeek-R1-32B
   - 하드웨어: A100 80GB × 2장
   - 총비용: ~$30K (하드웨어)
 
@@ -1715,7 +1715,7 @@ Results:
 **시나리오 1: CSV 데이터 탐색적 분석**
 
 ```python
-# 추천 모델: Qwen-7B (빠르고 충분한 성능)
+# 추천 모델: DeepSeek-R1-7B (빠르고 충분한 성능)
 
 import pandas as pd
 
@@ -1778,7 +1778,7 @@ Looking at the data:
 **시나리오 2: 복잡한 통계 분석**
 
 ```python
-# 추천 모델: Qwen-32B (고급 통계 추론 필요)
+# 추천 모델: DeepSeek-R1-32B (고급 통계 추론 필요)
 
 prompt = """
 Perform a multivariate regression analysis:
@@ -1806,7 +1806,7 @@ Provide step-by-step statistical reasoning.
 **시나리오 3: 빠른 데이터 탐색**
 
 ```python
-# 추천 모델: Qwen-1.5B (초고속 응답)
+# 추천 모델: DeepSeek-R1-1.5B (초고속 응답)
 
 quick_prompt = """
 Quick summary of this dataset:
