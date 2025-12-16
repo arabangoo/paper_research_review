@@ -7,10 +7,10 @@
 [![License](https://img.shields.io/badge/License-MIT-green)]()
 [![Model](https://img.shields.io/badge/Model-671B%20Parameters-orange)]()
 
-**저자**: DeepSeek-AI Team   
-**발표**: 2025년 1월 20일   
-**분야**: Reinforcement Learning, Large Language Models, Reasoning   
-**arXiv**: https://arxiv.org/abs/2501.12948   
+**저자**: DeepSeek-AI Team
+**발표**: 2025년 1월 20일
+**분야**: Reinforcement Learning, Large Language Models, Reasoning
+**arXiv**: https://arxiv.org/abs/2501.12948
    
 ---
 
@@ -1480,7 +1480,6 @@ arr = [-2, 1, -3, 4, -1]
 print(max_subarray_sum(arr))  # Output: 4
 ```
 """
-```
 
 #### 시나리오 3: 교육용 수학 문제 풀이
 
@@ -2967,4 +2966,3 @@ After: "스마트한 알고리즘 > 무차별 스케일링"
 2. 단순 작업 (QA, 번역, 요약)
 3. Function calling, JSON 출력 중요
 4. Multi-turn 대화 중심
-
