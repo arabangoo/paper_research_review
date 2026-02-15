@@ -6,11 +6,11 @@
 [![Publication Date](https://img.shields.io/badge/Published-January%202020-blue)]()
 [![Citations](https://img.shields.io/badge/Citations-5000%2B-green)]()
 
-**저자**: Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei
-**소속**: Johns Hopkins University, OpenAI
-**발표**: 2020년 1월 23일
-**분야**: Machine Learning, Language Models, Scaling Laws
-**arXiv**: https://arxiv.org/abs/2001.08361
+**저자**: Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei   
+**소속**: Johns Hopkins University, OpenAI   
+**발표**: 2020년 1월 23일   
+**분야**: Machine Learning, Language Models, Scaling Laws   
+**arXiv**: https://arxiv.org/abs/2001.08361   
 
 ---
 
@@ -1641,4 +1641,5 @@ Test-Time Scaling:
   - Multimodal Scaling: 텍스트+이미지+오디오+비디오
   - Reasoning Scaling: 추론 능력의 별도 스케일링 법칙
 ```
+
 
