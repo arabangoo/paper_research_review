@@ -6,9 +6,9 @@
 [![Publication Date](https://img.shields.io/badge/Published-June%202021-blue)]()
 [![ICLR](https://img.shields.io/badge/ICLR-2022-green)]()
 
-**저자**: Edward J. Hu, Yelong Shen, Phillip Wallis 외 (Microsoft)
-**발표**: ICLR 2022
-**arXiv**: https://arxiv.org/abs/2106.09685
+**저자**: Edward J. Hu, Yelong Shen, Phillip Wallis 외 (Microsoft)   
+**발표**: ICLR 2022   
+**arXiv**: https://arxiv.org/abs/2106.09685   
 
 ---
 
