@@ -7,9 +7,9 @@
 [![Pages](https://img.shields.io/badge/Pages-86-orange)]()
 [![GitHub](https://img.shields.io/badge/GitHub-Paper--List-181717.svg)](https://github.com/WooooDyy/LLM-Agent-Paper-List)
 
-**저자**: Zhiheng Xi, Wenxiang Chen, Xin Guo 외 (복단대학교 등)
-**발표**: 2023년 9월 / SCIS (Science China Information Sciences) 커버 논문
-**arXiv**: https://arxiv.org/abs/2309.07864
+**저자**: Zhiheng Xi, Wenxiang Chen, Xin Guo 외 (복단대학교 등)   
+**발표**: 2023년 9월 / SCIS (Science China Information Sciences) 커버 논문   
+**arXiv**: https://arxiv.org/abs/2309.07864   
 
 ---
 
@@ -1342,3 +1342,4 @@ print(result["final_answer"])
 ---
 
 **이 서베이는 LLM 기반 에이전트 연구의 현황을 가장 체계적으로 정리한 레퍼런스 논문으로, 에이전트 관련 연구를 시작하는 모든 연구자와 엔지니어에게 필독 자료입니다.**
+
