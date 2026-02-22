@@ -64,7 +64,7 @@
 
 1950년대        1980년대        2010년대           2022년~
 철학적 개념  →  규칙 기반 AI  →  딥러닝 에이전트  →  LLM 기반 에이전트
-(Turing Test)   (Expert System)  (DQN, AlphaGo)    (GPT-4, LLaMA)
+(Turing Test)  (Expert System) (DQN, AlphaGo)     (GPT-4, LLaMA)
 
 핵심 전환점: ChatGPT 등장 이후 LLM이 에이전트의 "두뇌" 역할 가능성 증명
 ```
@@ -1342,5 +1342,6 @@ print(result["final_answer"])
 ---
 
 **이 서베이는 LLM 기반 에이전트 연구의 현황을 가장 체계적으로 정리한 레퍼런스 논문으로, 에이전트 관련 연구를 시작하는 모든 연구자와 엔지니어에게 필독 자료입니다.**
+
 
 
